@@ -1,6 +1,4 @@
-# bci_esi
-real-time ESI-based BCI decoding (He Lab - Edelman PhD)
-
+# Brain-computer interface - real-time neuroimaging
 
 Used for the following publications:
 

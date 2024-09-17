@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../batch" />
+    <content url="file://$MODULE_DIR$/../parms" />
+    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$/../../FullMonty254-20110710">
+      <sourceFolder url="file://$MODULE_DIR$/../../FullMonty254-20110710/App/Lib/site-packages/BCPy2000-33960-py2.5.egg/BCPy2000" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 2.5.4 (C:\Users\cline076\Dropbox\Research\BCI GUIs\BCPy2000-FullMonty254-20110710\FullMonty254-20110710\App\python.exe)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,13 @@
+Filtering:LinearClassifier matrix Classifier= 4 { input%20channel input%20element%20(bin) 3 4 } C3 12Hz 1 -1 C4 12Hz 1 1 C3 12Hz 2 -1 C4 12Hz 2 -1 // Linear classification matrix in sparse representation
+Filtering:Normalizer floatlist NormalizerOffsets= 2 0 0 0 % % // normalizer offsets
+Filtering:Normalizer floatlist NormalizerGains= 2 0.01 0.005 0 % % // normalizer gain values
+Filtering:Normalizer intlist Adaptation= 2 2 2 0 0 2 // 0: no adaptation, 1: zero mean, 2: zero mean, unit variance (enumeration)
+PythonApp string ApplicationDescription= continuous%20pursuit%20task%20(EEGInput) % a z // Identifies the stimulus presentation module
+Storage:Session:DataIOFilter string SubjectName= EEGInput_Name % % // subject alias
+Source:Signal%20Properties:DataIOFilter int SourceCh= 68 16 1 % // number of digitized and stored channels
+Source:Signal%20Properties:SignalGeneratorADC int SampleBlockSize= 40 32 1 % // number of samples transmitted at a time
+Source:Signal%20Properties:SignalGeneratorADC int SamplingRate= 1000 256Hz 1 % // sample rate
+Source:Online%20Processing:TransmissionFilter list TransmitChList= 2 26 30 // list of transmitted channels
+Source:Signal%20Properties:DataIOFilter floatlist SourceChOffset= 68 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 % % // Offset for channels in A/D units
+Source:Signal%20Properties:DataIOFilter floatlist SourceChGain= 68 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.0298023 0.003 % % // gain for each channel (A/D units -> muV)
+Source:NeuroscanADC string ServerAddress= localhost:3999 // address and port of the Neuroscan Acquire server

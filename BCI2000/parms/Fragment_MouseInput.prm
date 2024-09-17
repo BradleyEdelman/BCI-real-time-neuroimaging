@@ -1,0 +1,22 @@
+Filtering:LinearClassifier matrix Classifier= 4 { input%20channel input%20element%20(bin) 3 4 } C3 12Hz 1 1 C4 12Hz 1 0 C3 12Hz 2 0 C4 12Hz 2 1 // Linear classification matrix in sparse representation
+Filtering:Normalizer floatlist NormalizerOffsets= 2 0 0 0 % % // normalizer offsets
+Filtering:Normalizer floatlist NormalizerGains= 2 0.01 0.005 0 % % // normalizer gain values
+Filtering:Normalizer intlist Adaptation= 2 2 2 0 0 2 // 0: no adaptation, 1: zero mean, 2: zero mean, unit variance (enumeration)
+PythonApp string ApplicationDescription= continuous%20pursuit%20task%20(mouseInput) % a z // Identifies the stimulus presentation module
+Source:Signal%20Properties:DataIOFilter floatlist SourceChOffset= 2 0 0 0 % % // Offset for channels in A/D units
+Source:Signal%20Properties:DataIOFilter floatlist SourceChGain= 2 1 1 0.003 % % // gain for each channel (A/D units -> muV)
+Storage:Session:DataIOFilter string SubjectName= MouseInput_Name % % // subject alias
+Source:Signal%20Properties:SignalGeneratorADC int SourceCh= 2 16 1 % // number of digitized and stored channels
+Source:Signal%20Properties:SignalGeneratorADC int SampleBlockSize= 40 32 1 % // number of samples transmitted at a time
+Source:Signal%20Properties:SignalGeneratorADC int SamplingRate= 1000 256Hz 1 % // sample rate
+Source:SignalGeneratorADC int ModulateAmplitude= 1 0 0 1 // Modulate the amplitude with the mouse (0=no, 1=yes) (boolean)
+Source:SignalGeneratorADC int SineChannelX= 1 0 0 % // Channel number of sinewave controlled by mouse x position
+Source:SignalGeneratorADC int SineChannelY= 2 0 0 % // Channel number of sinewave controlled by mouse y position (0 for all)
+Source:SignalGeneratorADC int SineChannelZ= 3 0 0 % // Channel number of sinewave controlled by mouse key state
+Source:SignalGeneratorADC float SineFrequency= 10Hz 10Hz % % // Frequency of sine wave
+Source:SignalGeneratorADC int SineAmplitude= 100muV 100muV % % // Amplitude of sine wave
+Source:SignalGeneratorADC int NoiseAmplitude= 30muV 30muV % % // Amplitude of white noise (common to all channels)
+Source:SignalGeneratorADC int DCOffset= 0muV 0muV % % // DC offset (common to all channels)
+Source:SignalGeneratorADC string OffsetMultiplier= % StimulusType % % // Expression to multiply offset by
+Source:SignalGeneratorADC int SignalType= 0 0 0 2 // numeric type of output signal:  0: int16, 1: float32, 2: int32 (enumeration)
+Source:Online%20Processing:TransmissionFilter list TransmitChList= 2 1 2 // list of transmitted channels

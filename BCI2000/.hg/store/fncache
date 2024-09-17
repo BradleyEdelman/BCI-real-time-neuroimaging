@@ -1,0 +1,14 @@
+data/batch/ContinuousPursuit_mouse.bat.i
+data/parms/Yoga_UD_BCI.prm.i
+data/batch/LRBars_mouse.bat.i
+data/parms/2DCal.prm.i
+data/batch/Conventional2D_mouse.bat.i
+data/parms/Fragment_MouseInput.prm.i
+data/parms/LRBars.prm.i
+data/parms/Yoga_LR_BCI.prm.i
+data/parms/Fragment_EEGInput.prm.i
+data/parms/ContinuousPursuit.prm.i
+data/python/BCIApplication_ContinuousPursuit.py.i
+data/batch/ContinuousPursuit_eeg.bat.i
+data/python/BCIApplication_LRBars.py.i
+data/parms/Yoga_2D_BCI.prm.i

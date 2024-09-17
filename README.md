@@ -1,6 +1,9 @@
-# bci_esi
-real-time ESI-based BCI decoding (He Lab - Edelman PhD)
+# Brain-computer interface - Real-time neuroimaging
 
+Real-time BCI platform used to assess performance of:
+(1) discrete trial vs continuous pursuit BCI training
+(2) source (EEG source imaging) vs sensor space decoding
+(3) continuous robotic arm control
 
 Used for the following publications:
 

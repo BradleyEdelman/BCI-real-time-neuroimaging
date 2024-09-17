@@ -1,0 +1,123 @@
+function [hObject,handles]=bci_fESI_Load(hObject,handles,Type)
+
+
+if strcmp(Type,'SYSTEM')
+    
+    StringFields={'initials','session','run','year','month','day',...
+        'savepath','fs','lowcutoff','highcutoff','dsfactor'};
+            
+    ValueFields={'tasktype','domain','eegsystem','psd'};
+            
+    HandleFields={'masterdir','subdir','sessiondir','savefiledir',...
+        'filter','Electrodes'};
+    
+    % Unmatched import fields
+    ExtraInput={'Electrodes'};
+    ExtraOutput={'selectsensors'};
+
+elseif strcmp(Type,'ESI')
+    
+    StringFields={'cortexfile','cortexlrfile','headmodelfile','fmrifile',...
+        'brainregionfile','noisefile','esifiles'};
+    
+    ValueFields={'parcellation','noise'};
+    
+    HandleFields={'cortex','cortexlr','lrinterp','headmodel','psd',...
+        'noisecov','whitener','fmriprioridx','fmripriorval','jfmri',...
+        'wfmri','selectbrainregions','vertidxinclude','vertidxexclude',...
+        'leadfield','leadfieldweights','clusters','clusterleadfield',...
+        'clustersourcecov','residualsolution','lambdasq'};
+    
+    
+    userdatafields={'selectbrainregions'};
+    
+    ExtraInput={};
+    ExtraOutput={};
+    
+elseif strcmp(Type,'REGRESSION')    
+    
+    StringFields={};
+    
+    ValueFields={};
+    
+    HandleFields={};
+
+elseif strcmp(Type,'BCI')
+    
+    StringFields={};
+    
+    ValueFields={};
+    
+    HandleFields={};
+
+else
+    
+    fprintf(2,'NOT A VALID FILE TYPE TO LOAD\n');
+    
+end
+
+
+savepath=get(handles.savepath,'String');
+[filename,pathname]=uigetfile(strcat(savepath,'\*.mat*'));
+file=strcat(pathname,filename);
+
+if isempty(strfind(file,Type))
+    fprintf(2,'MUST SELECT A "%s" FILE TO LOAD %s PARAMETERS\n',Type,Type);
+else
+    load(file);
+
+    savevar=matlab.lang.makeValidName(strcat('Save',Type));
+
+    if exist(savevar,'var')
+        
+        % STRING FIELDS
+        for i=1:size(StringFields,2)
+            if isfield(eval(savevar),StringFields{i})
+                set(handles.(StringFields{i}),'backgroundcolor','green',...
+                    'string',eval([savevar '.' (StringFields{i});]));
+                handles.(Type).(StringFields{i})=eval([savevar '.' (StringFields{i});]);
+            end
+        end
+        
+        % VALUE FIELDS
+        for i=1:size(ValueFields,2)
+            if isfield(eval(savevar),ValueFields{i})
+                set(handles.(ValueFields{i}),'backgroundcolor','green',...
+                    'value',eval([savevar '.' (ValueFields{i});]));
+                handles.(Type).(ValueFields{i})=eval([savevar '.' (ValueFields{i});]);
+            end
+        end
+        
+        % HANDLE TYPE FIELDS
+        for i=1:size(HandleFields,2)
+            if isfield(eval(savevar),HandleFields{i})
+                handles.(Type).(HandleFields{i})=eval([savevar '.' (HandleFields{i});]);
+            end
+        end
+        
+        % UserData Fields
+        for i=1:size(userdatafields,2)
+            if isfield(eval(savevar),userdatafields{i})
+                handles.(Type).(userdatafields{i}=eval([savevar '.' (userdatafields{i})
+        
+        
+        % HANDLE FIELDS
+        for i=1:size(ExtraInput,2)
+            if isfield(eval(savevar),ExtraInput{i})
+                handles.(ExtraInput{i})=eval([savevar '.' (ExtraInput{i});]);
+                
+                if strcmp(ExtraInput{i},'Electrodes')
+                    tmp=ones(size(eval([savevar '.Electrodes.original.eLoc']),2),1);
+                    tmp(eval([savevar '.Electrodes.chanidxexclude']))=0;
+                    set(handles.selectsensors,'userdata',tmp,'backgroundcolor','green');
+                end
+
+            end
+        end
+        
+        
+    end
+
+end
+
+

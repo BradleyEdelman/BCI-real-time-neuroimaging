@@ -1,0 +1,55 @@
+Version dated June 14, 2016 (Continuous Control Paradigm)
+
+Standalone package:
+
+Key Features:
+
+
+SYSTEM PARAMETERS:
+-select EEG sensors via pop-up window
+-signal generator sensor locations not organized
+-downsampling factor (applies to all EEG data in source imaging/training/online)
+
+
+SOURCE IMAGING PARAMETERS:
+-Default anatomy and sample BEM models (Headmodels) for all five EEG systems
+-Custom ROI(s) discontinued
+-Select brain regions for regression
+-Multivariate source prelocalization for parcellation of cortex (requires training data)
+-No check to make sure training data compatible with selected EEG system
+-Data driven noise estimation no thoroughly tested
+-fMRI weighting unchanged
+
+
+TRAINING DATA PARAMETERS
+-Only set up for BCI2000.dat files (can use stimulus presentation or cursor task data files)
+-Parallel linear regression on all sensors and/or brain parcels
+     -One vs. one, one vs. all, one vs. rest regression
+     -All sensors, all dipoles, all parcels
+-Display all frequencies as image plot or single frequency as brain/topo
+-Load regression is a dead button
+
+
+BCI PARAMETERS:
+-Select data window for analysis
+-Select update window
+-Select up to three dimensional control signals
+     -Dimension, task competition, frequency
+     -1Hz frequency analysis from broadband filtered data (frequency bounds defined in system parameters)
+     -stepwise linear regression with backward step removal on selected frequency to identify best locations
+     -(no method to identify best frequency)
+     -Normalizer settings unchanged
+
+DISPLAY PARAMETERS:
+-Unchanged for electrode activity, source activity, low resolution source activity, normalizer
+-Saved files can be visualized independently (frequency parameter no longer applies)
+
+
+Last updated: 10/18/2016 BE
+
+
+
+
+Update ESI parcell/no parcel
+default sensor and brain loc
+differetn dimension BCI training data

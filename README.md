@@ -4,19 +4,11 @@ This **real-time BCI platform** is designed to assess and improve **continuous n
 
 - **Discrete trial vs. continuous pursuit BCI training** – Comparing performance between event-based (center-out) and continuous control.
 - **Source (EEG source imaging) vs. sensor space decoding** – Evaluating whether EEG source reconstruction improves decoding accuracy over direct sensor-space processing.
-- **Continuous robotic arm control** – Enhancing noninvasive neural tracking for smoother, more intuitive control. <br />
+- **Continuous robotic arm control** – Enhancing noninvasive neural tracking for smoother, more intuitive control.
 
+---
 
-## 📺 Video Demonstration
-[![Watch the video](https://img.youtube.com/vi/UkZquERzoOo/0.jpg)](https://www.youtube.com/watch?v=UkZquERzoOo) <br />
-🔗 *Click the image to watch on YouTube.*
-
-## 📂 Open-Source Data Repository
-The full dataset used in these studies is available on **Dryad** for open access:  
-📁 **[Dryad Repository](https://datadryad.org/stash/dataset/doi:10.5061/dryad.v46p2jh)** <br /> <br />
-
-
-## Publications Using This Platform:
+## 📄 Publications Using This Platform:
 
 ### 1. Noninvasive neuroimaging enhances continuous neural tracking for robotic device control
 **B. J. Edelman et al., Science Robotics, 2019**  
@@ -39,6 +31,16 @@ The full dataset used in these studies is available on **Dryad** for open access
   - Identifies challenges in **real-world deployment** of neurorobotic systems, including physical limitations.  
 
 📄 [Read the full paper](https://iopscience.iop.org/article/10.1088/1741-2552/abc0b4/meta)
+
+---
+
+## 📺 Video Demonstration
+[![Watch the video](https://img.youtube.com/vi/UkZquERzoOo/0.jpg)](https://www.youtube.com/watch?v=UkZquERzoOo) <br />
+🔗 *Click the image to watch on YouTube.*
+
+## 📂 Open-Source Data Repository
+The full dataset used in these studies is available on **Dryad** for open access:  
+📁 **[Dryad Repository](https://datadryad.org/stash/dataset/doi:10.5061/dryad.v46p2jh)** <br /> 
 
 ---
 

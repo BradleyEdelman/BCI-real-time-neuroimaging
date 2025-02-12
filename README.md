@@ -6,6 +6,16 @@ This **real-time BCI platform** is designed to assess and improve **continuous n
 - **Source (EEG source imaging) vs. sensor space decoding** – Evaluating whether EEG source reconstruction improves decoding accuracy over direct sensor-space processing.
 - **Continuous robotic arm control** – Enhancing noninvasive neural tracking for smoother, more intuitive control.
 
+
+## 📺 Video Demonstration
+[![Watch the video](https://img.youtube.com/vi/UkZquERzoOo/0.jpg)](https://www.youtube.com/watch?v=UkZquERzoOo)
+
+
+## 📂 Open-Source Data Repository
+The full dataset used in these studies is available on **Dryad** for open access:  
+📁 **[Dryad Repository](https://datadryad.org/stash/dataset/doi:10.5061/dryad.v46p2jh)**
+
+
 ## Publications Using This Platform:
 
 ### 1. Noninvasive neuroimaging enhances continuous neural tracking for robotic device control

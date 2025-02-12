@@ -4,16 +4,16 @@ This **real-time BCI platform** is designed to assess and improve **continuous n
 
 - **Discrete trial vs. continuous pursuit BCI training** – Comparing performance between event-based (center-out) and continuous control.
 - **Source (EEG source imaging) vs. sensor space decoding** – Evaluating whether EEG source reconstruction improves decoding accuracy over direct sensor-space processing.
-- **Continuous robotic arm control** – Enhancing noninvasive neural tracking for smoother, more intuitive control.
+- **Continuous robotic arm control** – Enhancing noninvasive neural tracking for smoother, more intuitive control. <br />
 
 
 ## 📺 Video Demonstration
-[![Watch the video](https://img.youtube.com/vi/UkZquERzoOo/0.jpg)](https://www.youtube.com/watch?v=UkZquERzoOo)
-
+[![Watch the video](https://img.youtube.com/vi/UkZquERzoOo/maxresdefault.jpg)](https://www.youtube.com/watch?v=UkZquERzoOo)  
+🔗 *Click the image to watch on YouTube.*
 
 ## 📂 Open-Source Data Repository
 The full dataset used in these studies is available on **Dryad** for open access:  
-📁 **[Dryad Repository](https://datadryad.org/stash/dataset/doi:10.5061/dryad.v46p2jh)**
+📁 **[Dryad Repository](https://datadryad.org/stash/dataset/doi:10.5061/dryad.v46p2jh)** <br /> <br />
 
 
 ## Publications Using This Platform:

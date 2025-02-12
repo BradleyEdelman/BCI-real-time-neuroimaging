@@ -44,6 +44,16 @@ The full dataset used in these studies is available on **Dryad** for open access
 
 ---
 
+## 🏅 Patent  
+This BCI platform is covered under the following patent:  
+
+**"Methods and Systems for Noninvasive Mind-Controlled Devices"**  
+📜 **Patent Number:** US20210018896A1  
+🔗 **[View Patent on Google Patents](https://patents.google.com/patent/US20210018896A1/en)**  
+
+
+---
+
 ## Summary:
 This research supports the development of **noninvasive, real-time BCI systems** for **continuous robotic arm control**, leveraging **EEG-based neural tracking**. The findings emphasize:
 - The **benefits of continuous tracking** over discrete commands.

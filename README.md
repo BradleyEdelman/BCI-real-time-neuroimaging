@@ -8,7 +8,7 @@ This **real-time BCI platform** is designed to assess and improve **continuous n
 
 
 ## 📺 Video Demonstration
-[![Watch the video](https://img.youtube.com/vi/UkZquERzoOo/maxresdefault.jpg)](https://www.youtube.com/watch?v=UkZquERzoOo)  
+[![Watch the video](https://img.youtube.com/vi/UkZquERzoOo/0.jpg)](https://www.youtube.com/watch?v=UkZquERzoOo)
 🔗 *Click the image to watch on YouTube.*
 
 ## 📂 Open-Source Data Repository
